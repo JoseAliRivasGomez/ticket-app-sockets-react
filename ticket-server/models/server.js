@@ -24,7 +24,7 @@ class Server {
     middlewares(){
         this.app.use(express.static(path.resolve(__dirname, '../public')));
         this.app.use(cors());
-        this.app.use(express.static('public'));
+
         this.app.get('/ultimos', (req, res) => {
             res.json({
                 ok: true,
